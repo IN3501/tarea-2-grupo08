@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
-
+{% block head %}
+    <META HTTP-EQUIV="REFRESH" CONTENT="3;URL={% url 'productos' %}">
+{% endblock head %}
 {% block body %}
-
-<h2> envío exitoso <h2>
+    <div class="container">
+        <h2> Envío exitoso </h2>
+    </div>
 
 {% endblock body %}

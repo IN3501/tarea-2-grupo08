@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
-def blank(request):
-    return render(request,'blank.html')
+def productos(request):
+    return render(request, 'productos.html')
 
-def checkout(request):
-    return render(request,'checkout.html')
+def agregar(request):
+    return render(request, 'agregar.html')
 
 def signup(request):
 	return render(request,'signup.html')
@@ -15,4 +15,7 @@ def contact(request):
 
 def enviado(request):
 	return render(request,'enviado.html')
+
+def ficha(request):
+	return render(request,'ficha.html')
 
