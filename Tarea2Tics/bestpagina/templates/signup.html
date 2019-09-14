@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+ {% block body %}
+
+<br>
+
+<div id="descripcion" class="container">
+    <h1>Iniciar sesión</h1>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+    <form action="/enviado/" method="POST" autocomplete="off">  {% csrf_token %}
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Correo electrónico</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="" name="inputEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Contraseña</label>
+      <input type="password" class="form-control" id="examplePassword" placeholder="" name="inputPassword">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+<br>
+
+<div id="descripcion" class="container">
+    <h1>Registra una Cuenta Gratuita</h1>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+    <form action="/enviado/" method="POST" autocomplete="off">  {% csrf_token %}
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Dirección de correo electrónico</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="" name="inputEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre de usuario</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="" name="inputText">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="examplePassword" placeholder="" name="inputPassword">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleNumber">Fecha de nacimiento</label>
+      <input type="date" class="form-control" id="exampleDate" placeholder="" name="inputDate">
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Masculino" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Masculino
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Femenino">
+      <label class="form-check-label" for="exampleRadios2">
+        Femenino
+      </label>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Crear cuenta</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock body %}
